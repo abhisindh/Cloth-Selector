@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js"></script>
     <header>
-        <h1 onclick="changePage('second-page','first-page')">⇐</h1>
+        <h1 class="backButton" onclick="changePage('second-page','first-page')">⇦</h1>
     </header>
 
     <!-- first page start here -->
     <div class="first-page">
-        <div class="set-icon" onclick="changePage('first-page','second-page')">set icon</div>
+        <div class="set-icon" onclick="showList(setOne,'setOne')">set icon</div>
         <div class="set-icon">.</div>
         <div class="set-icon">.</div>
         <div class="set-icon">.</div>
@@ -26,6 +26,7 @@
         <div class="set-icon">.</div>
         <div class="set-icon">.</div>
         <div class="set-icon">.</div>
+        
 
     </div>
     <!-- first page end here -->
@@ -33,72 +34,12 @@
 
 
     <!-- second page start here -->
-    <div class="second-page">
-        <div class="shirt-icon">FIRST</div>
+    <div class="second-page" id="shirtList">
+        <div id="firstWhiteSpace" class="shirt-icon">.</div>
         <div class="shirt-icon">.</div>
         <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div><div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div><div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        
     </div>
     <!-- second page end here -->
-    <footer></footer>
+    <div class="footer">.</div>
 </body>
 </html>

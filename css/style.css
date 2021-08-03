@@ -8,11 +8,23 @@
     --iconColor:#32EDA2;
     --textColor:#0000;
 }
-header,footer{
+header{
     height: 100px;
     width: 100vw;
     position: fixed;
     background-color: var(--headerColor);
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width:100vw;
+    height: 100px;
+    background-color: var(--headerColor);
+}
+.backButton{
+    cursor: pointer;
+    color: white;
 }
 .second-page,.first-page{
     display: grid;
@@ -26,6 +38,8 @@ header,footer{
 }
 .shirt-icon,.set-icon{
     width: 100%;
-    background-color: var(--iconColor);
     height: 110px;
+}
+.set-icon{
+    background-color: var(--iconColor);
 }
