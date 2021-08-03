@@ -1,0 +1,31 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+:root{
+    --headerColor:#36C3F0;
+    --bodyColor:#B4F88A;
+    --iconColor:#32EDA2;
+    --textColor:#0000;
+}
+header,footer{
+    height: 100px;
+    width: 100vw;
+    position: fixed;
+    background-color: var(--headerColor);
+}
+.second-page,.first-page{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding-top: 110px;
+}
+.second-page{
+    display: none;
+}
+.shirt-icon,.set-icon{
+    width: 100%;
+    background-color: var(--iconColor);
+    height: 110px;
+}
