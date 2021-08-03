@@ -26,12 +26,15 @@ header{
     cursor: pointer;
     color: white;
 }
-.second-page,.first-page{
+.set-list,.icon-list{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     padding-top: 110px;
+}
+.icon-list{
+    padding: 0;
 }
 .second-page{
     display: none;
@@ -43,3 +46,10 @@ header{
 .set-icon{
     background-color: var(--iconColor);
 }
+.selectRandom{
+    color: black;
+}
+@media screen and (min-width: 992px) {
+    .set-list,.icon-list{
+        grid-template-columns: repeat(10, 1fr);
+  }

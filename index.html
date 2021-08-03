@@ -9,23 +9,24 @@
 <body>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js"></script>
+    <script src="./js/server.js"></script>
     <header>
-        <h1 class="backButton" onclick="changePage('second-page','first-page')">⇦</h1>
+        <h1 class="backButton" onclick="back()">⇦</h1>
     </header>
 
     <!-- first page start here -->
-    <div class="first-page">
-        <div class="set-icon" onclick="showList(setOne,'setOne')">set icon</div>
-        <div class="set-icon">.</div>
-        <div class="set-icon">.</div>
-        <div class="set-icon">.</div>
-        <div class="set-icon">.</div>
-        <div class="set-icon">.</div>
-        <div class="set-icon">.</div>
-        <div class="set-icon">.</div>
-        <div class="set-icon">.</div>
-        <div class="set-icon">.</div>
-        <div class="set-icon">.</div>
+    <div class="set-list">
+        <div class="set-icon first-page" onclick="showList('setOne')">one</div>
+        <div class="set-icon first-page" onclick="showList('setTwo')">two</div>
+        <div class="set-icon first-page">.</div>
+        <div class="set-icon first-page">.</div>
+        <div class="set-icon first-page">.</div>
+        <div class="set-icon first-page">.</div>
+        <div class="set-icon first-page">.</div>
+        <div class="set-icon first-page">.</div>
+        <div class="set-icon first-page">.</div>
+        <div class="set-icon first-page">.</div>
+        <div class="set-icon first-page">.</div>
         
 
     </div>
@@ -34,12 +35,15 @@
 
 
     <!-- second page start here -->
-    <div class="second-page" id="shirtList">
-        <div id="firstWhiteSpace" class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
-        <div class="shirt-icon">.</div>
+    <div class="icon-list" id="shirtList">
+        <div id="firstWhiteSpace" class="shirt-icon"></div>
+        <div class="shirt-icon"></div>
+        <div class="shirt-icon"></div>
     </div>
     <!-- second page end here -->
-    <div class="footer">.</div>
+    <div class="footer">
+        <div class="selectRandom">Select Random</div>
+        <div class="reset" onclick="reset()">reset</div>
+    </div>
 </body>
-</html>
+</html> 
