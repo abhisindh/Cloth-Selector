@@ -1,4 +1,5 @@
 selectedSet={}
+selectedSetName=''
 function changePage(from,to){
     firstPage=document.getElementsByClassName(from)
     secondPage=document.getElementsByClassName(to)
@@ -15,6 +16,7 @@ function back(){
     
 }
 function showList(name){
+    selectedSetName=name
     selectSet(name);
     for (item in selectedSet){
         let figure=document.createElement("figure")
@@ -26,9 +28,10 @@ function showList(name){
         img.classList.add("shirt-icon")
         img.classList.add("second-page")
         img.id=item
+        img.setAttribute('onclick','selectItem(this.id)')
 
         let caption=document.createElement('figcaption')
-        caption.innerHTML=selectedSet.item
+        caption.innerHTML=selectedSet[item].replace('T','<br>')
         figure.appendChild(caption)
 
         list=document.getElementById('shirtList')
@@ -37,11 +40,19 @@ function showList(name){
     changePage('first-page','second-page')
 }
 function selectItem(item){
-    console.log(item.id);
-    console.log(new Date());
+    console.log(item);
+    changeValue(item)
+
 
 }
+function changeValue(item){
+    selectedSet[item]=new Date();
+    console.log(selectedSet[item]);
+    localStorage.setItem(selectedSetName,JSON.stringify(selectedSet))
+    showList(selectedSetName)
+    
 
+}
 
 
 
