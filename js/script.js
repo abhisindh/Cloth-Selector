@@ -18,6 +18,7 @@ function back(){
 function showList(name){
     selectedSetName=name
     selectSet(name);
+    console.log(selectedSet);
     for (item in selectedSet){
         let figure=document.createElement("figure")
 
@@ -31,7 +32,7 @@ function showList(name){
         img.setAttribute('onclick','selectItem(this.id)')
 
         let caption=document.createElement('figcaption')
-        caption.innerHTML=selectedSet[item].replace('T','<br>')
+        caption.innerHTML=new Date(selectedSet[item]).toString().replace('GMT+0530 (India Standard Time)','')
         figure.appendChild(caption)
 
         list=document.getElementById('shirtList')
@@ -46,12 +47,32 @@ function selectItem(item){
 
 }
 function changeValue(item){
-    selectedSet[item]=new Date();
+    selectedSet[item]=Date.now();
     console.log(selectedSet[item]);
     localStorage.setItem(selectedSetName,JSON.stringify(selectedSet))
     showList(selectedSetName)
-    
+    location=location
 
+}
+
+function JSalert(){
+	swal({   title: "Your account will be deleted permanently!",   
+    text: "Are you sure to proceed?",   
+    type: "warning",   
+    showCancelButton: true,   
+    confirmButtonColor: "#DD6B55",   
+    confirmButtonText: "Yes, Remove My Account!",   
+    cancelButtonText: "No, I am not sure!",   
+    closeOnConfirm: false,   
+    closeOnCancel: false }, 
+    function(isConfirm){   
+        if (isConfirm) 
+    {   
+        swal("Account Removed!", "Your account is removed permanently!", "success");   
+        } 
+        else {     
+            swal("Hurray", "Account is not removed!", "error");   
+            } });
 }
 
 
