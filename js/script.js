@@ -22,7 +22,7 @@ function showList(name){
     for (item in selectedSet){
         let figure=document.createElement("figure")
 
-        path="../../images/shirt/"+item
+        path="./images/shirt/"+item
         let img=document.createElement("img")
         img.src=path
         figure.appendChild(img)
