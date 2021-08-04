@@ -16,6 +16,6 @@ var setOneInit={'IMG_20210709_200308.jpg': '.', 'IMG_20210709_200357.jpg': '.', 
 var setTwoInit={'IMG_20210804_150133.jpg': '.', 'IMG_20210804_150151.jpg': '.', 'IMG_20210804_150215.jpg': '.', 'IMG_20210804_150226.jpg': '.', 'IMG_20210804_150457.jpg': '.', 'IMG_20210804_150509.jpg': '.', 'IMG_20210804_150519.jpg': '.'}
 
 function copy(set){
- copyToClp(set)  
+ copyToClp(JSON.stringify(set))  
  console.log(set); 
 }
