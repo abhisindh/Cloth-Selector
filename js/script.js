@@ -41,8 +41,9 @@ function showList(name){
     changePage('first-page','second-page')
 }
 function selectItem(item){
+    if (confirm('Are you sure to select item last worn on '+new Date(selectedSet[item]))){
     console.log(item);
-    changeValue(item)
+    changeValue(item)}
 
 
 }

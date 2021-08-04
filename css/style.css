@@ -54,6 +54,7 @@ figcaption{
 .selectRandom{
     color: black;
 }
+
 @media screen and (min-width: 992px) {
     .set-list,.icon-list{
         grid-template-columns: repeat(10, 1fr);
