@@ -50,6 +50,11 @@ figcaption{
 }
 .set-icon{
     background-color: var(--iconColor);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
 }
 .reset{
     color: var(--headerColor);
