@@ -22,7 +22,7 @@ function showList(name){
     for (item in selectedSet){
         let figure=document.createElement("figure")
 
-        path="../images/shirt/"+item
+        path="./images/shirt/"+item
         let img=document.createElement("img")
         img.src=path
         figure.appendChild(img)
@@ -56,25 +56,7 @@ function changeValue(item){
 
 }
 
-function JSalert(){
-	swal({   title: "Your account will be deleted permanently!",   
-    text: "Are you sure to proceed?",   
-    type: "warning",   
-    showCancelButton: true,   
-    confirmButtonColor: "#DD6B55",   
-    confirmButtonText: "Yes, Remove My Account!",   
-    cancelButtonText: "No, I am not sure!",   
-    closeOnConfirm: false,   
-    closeOnCancel: false }, 
-    function(isConfirm){   
-        if (isConfirm) 
-    {   
-        swal("Account Removed!", "Your account is removed permanently!", "success");   
-        } 
-        else {     
-            swal("Hurray", "Account is not removed!", "error");   
-            } });
-}
+
 
 
 
