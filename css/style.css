@@ -51,9 +51,10 @@ figcaption{
 .set-icon{
     background-color: var(--iconColor);
 }
-.selectRandom{
-    color: black;
+.reset{
+    color: var(--headerColor);
 }
+
 
 @media screen and (min-width: 992px) {
     .set-list,.icon-list{
