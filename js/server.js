@@ -3,12 +3,13 @@ function reset(){
     if (confirm('Are you sure you want to reset the order of list items?')){ 
         
         for (item in collectionObj){
-            localStorage.setItem('set'+item,JSON.stringify(collectionObj['set'+item]));
-            console.log(collectionObj['set'+item]);
+            setItem='set'+item
+            localStorage.setItem(setItem,JSON.stringify(collectionObj[item]));
+            console.log(collectionObj[item]);
         }
         
         }
-        //location=location
+        location=location
 }
 function sortSet(set){
     const sortable = Object.fromEntries(
