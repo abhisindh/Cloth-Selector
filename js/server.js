@@ -3,8 +3,8 @@ function reset(){
     if (confirm('Are you sure you want to reset the order of list items?')){ 
         
         for (item in collectionObj){
-            localStorage.setItem(item,JSON.stringify(collectionObj[item]));
-            console.log(collectionObj[item]);
+            localStorage.setItem('set'+item,JSON.stringify(collectionObj['set'+item]));
+            console.log(collectionObj['set'+item]);
         }
         
         }

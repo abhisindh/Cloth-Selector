@@ -14,7 +14,7 @@ var setTenInit={'IMG_20210804_150151.jpg': date, 'IMG_20210804_150215.jpg': date
 var setElevenInit={'IMG_20210804_150151.jpg': date, 'IMG_20210804_150215.jpg': date, 'IMG_20210804_150226.jpg': date, 'IMG_20210804_150457.jpg': date, 'IMG_20210804_150509.jpg': date, 'IMG_20210804_150519.jpg': date}
 var setTwelveInit={'IMG_20210804_150151.jpg': date, 'IMG_20210804_150215.jpg': date, 'IMG_20210804_150226.jpg': date, 'IMG_20210804_150457.jpg': date, 'IMG_20210804_150509.jpg': date, 'IMG_20210804_150519.jpg': date}
 
-var collectionObj={'setOne':setOneInit,'setTwo':setTwoInit,'setThree':setThreeInit,'setFour':setFourInit,'setFive':setFiveInit,'setSix':setSixInit,'setSeven':setSevenInit,'setEight':setEightInit,'setNine':setNineInit,'setTen':setTenInit,'setEleven':setElevenInit,'setTwelve':setTwelveInit}  
+var collectionObj={'One':setOneInit,'Two':setTwoInit,'Three':setThreeInit,'Four':setFourInit,'Five':setFiveInit,'Six':setSixInit,'Seven':setSevenInit,'Eight':setEightInit,'Nine':setNineInit,'Ten':setTenInit,'Eleven':setElevenInit,'Twelve':setTwelveInit}  
 
 
 var backOne=localStorage.getItem('backOne')

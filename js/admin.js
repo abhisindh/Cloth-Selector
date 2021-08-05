@@ -1,25 +1,29 @@
 
 function displaySets(){
     for (i in collectionObj){
-        var data=localStorage[i]
+        var data=localStorage['set'+i]
 
         
     
             var div=document.createElement('div')
             div.classList.add('box')
             document.body.insertBefore(div,backup)
-    
+
+            var p=document.createElement('p')
+            p.innerHTML='set'+i
+            div.appendChild(p)
+
             var textarea=document.createElement('textarea')
             textarea.innerHTML=data
             div.appendChild(textarea)
 
             var input=document.createElement('input')
-            input.placeholder=i
-            input.id=i+'-input'
+            input.placeholder='set'+i
+            input.id='set'+i+'-input'
             div.appendChild(input)
 
             var button=document.createElement('button')
-            button.id=i
+            button.id='set'+i
             button.innerHTML='update'
             button.setAttribute('onclick','getValue(this.id)')
    
@@ -45,16 +49,16 @@ function copy(set){
 }
 function saveToBackup(){
     if (confirm('Sure to backup current data?')){
-    localStorage.setItem('backOne',localStorage.getItem('setOne'))
-    localStorage.setItem('backTwo',localStorage.getItem('setTwo'))
-    localStorage.setItem('backThree',localStorage.getItem('setThree'))
+    for (i in collectionObj){
+    localStorage.setItem('back'+i,localStorage.getItem('set'+i))
+    }
     }
 }
 function loadFromBackup(){
     if (confirm('Sure to load last backedup data?')){
-        checkBackupEmpty('One')
-        checkBackupEmpty('Two')
-        checkBackupEmpty('Three')
+        for (i in collectionObj){
+        checkBackupEmpty(i)
+        }
         }
     
 }
