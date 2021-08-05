@@ -1,18 +1,24 @@
 
 function reset(){
     if (confirm('Are you sure you want to reset the order of list items?')){
-    for (let i in setOneInit){
-        setOneInit[i]=Date.now()
-    }
-    console.log(setOneInit);
-    for(let i in setTwoInit){
-        setTwoInit[i]=Date.now()
-    }
-        
-    localStorage.setItem('setOne',JSON.stringify(setOneInit));
-    localStorage.setItem('setTwo',JSON.stringify(setTwoInit));
-    }
-    
+        for (let i in setOneInit){
+            setOneInit[i]=Date.now()
+        }
+        console.log(setOneInit);
+        for(let i in setTwoInit){
+            setTwoInit[i]=Date.now()
+        }
+        for(let i in setTwoInit){
+            setTwoInit[i]=Date.now()
+        }for(let i in setThreeInit){
+            setThreeInit[i]=Date.now()
+        }
+            
+        localStorage.setItem('setOne',JSON.stringify(setOneInit));
+        localStorage.setItem('setTwo',JSON.stringify(setTwoInit));
+        localStorage.setItem('setThree',JSON.stringify(setThreeInit));
+        }
+        location=location
 }
 function sortSet(set){
     const sortable = Object.fromEntries(

@@ -1,5 +1,6 @@
 selectedSet={}
 selectedSetName=''
+
 function changePage(from,to){
     firstPage=document.getElementsByClassName(from)
     secondPage=document.getElementsByClassName(to)
@@ -12,10 +13,14 @@ function changePage(from,to){
 }
 
 function back(){
-    location.reload()
-    
+    document.getElementById('shirtList').innerHTML=''
+    changePage('second-page','first-page')
+
 }
+
+    
 function showList(name){
+    sessionStorage.setItem("selectedSet", name);
     selectedSetName=name
     selectSet(name);
     console.log(selectedSet);
@@ -51,8 +56,8 @@ function changeValue(item){
     selectedSet[item]=Date.now();
     console.log(selectedSet[item]);
     localStorage.setItem(selectedSetName,JSON.stringify(selectedSet))
+    document.getElementById('shirtList').innerHTML=''
     showList(selectedSetName)
-    location=location
 
 }
 

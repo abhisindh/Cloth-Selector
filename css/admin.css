@@ -10,3 +10,12 @@ textarea{
 .underline:hover{
     color: blue;
 }
+.box{
+    border-style: dashed;
+    margin: 20px 0 20px 0;
+    padding: 2px;
+}
+button,input{
+    padding: 10px;
+    margin: 10px 0 10px 0;
+}

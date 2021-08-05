@@ -10,33 +10,11 @@
     <link rel="stylesheet" href="./css/admin.css">
 </head>
 
-<body>
-<div class="box">
-    <div style="height: 50px;"></div>
-    <textarea onclick="displaySet('setOne')" class="setDisp" id="setOneDisp"></textarea>
-    <input type="text" placeholder="setOne" id="setOne-input">
-    <button id="setOne-button" onclick="getValue('setOne')">update</button>
-    <div style="height: 50px;"></div>
-</div>
-<div class="box">
-    <textarea onclick="displaySet('setTwo')" class="setDisp" id="setTwoDisp"></textarea>
-    <input type="text" placeholder="setTwo" id="setTwo-input">
-    <button id="setTwo-button" onclick="getValue('setTwo')">update</button>
-    <div style="height: 50px;"></div>
-</div>
-<div class="box">
-    <textarea onclick="displaySet('setThree')" class="setDisp" id="setThreeDisp"></textarea>
-    <input type="text" placeholder="setThree" id="setThree-input">
-    <button id="setThree-button" onclick="getValue('setThree')">update</button>
-    <div style="height: 50px;"></div>
-</div>
-<div style="height: 50px;"></div>
-<p class="underline" onclick="copy(backOne)">copy setOne backUp</p>
-<p class="underline" onclick="copy(backTwo)">copy setTwo backUp</p>
-<div style="height: 20px;"></div>
-<div class="underline" onclick="reset()">reset</div>
-<div style="height: 10px;"></div>
-<div class="underline" onclick="saveToBackup()">backup</div>
+<body onload="displaySets()">  
+
+    <button onclick="loadFromBackup()">load from backup</button>
+    <button id="backup" onclick="saveToBackup()">upload to backup</button><br>
+    <button onclick="reset()">reset</button>
 
 </body>
 </html>
