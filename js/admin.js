@@ -65,7 +65,7 @@ function loadFromBackup(){
 function checkBackupEmpty(num){
     var set='set'+num
     var back='back'+num
-    if (localStorage.getItem(back)!=undefined){
+    if (localStorage.getItem(back)!=undefined && localStorage.getItem(back)!=null){
         localStorage.setItem(set,localStorage.getItem(back))
     }
 
