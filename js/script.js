@@ -20,10 +20,8 @@ function back(){
 
     
 function showList(name){
-    sessionStorage.setItem("selectedSet", name);
     selectedSetName=name
     selectSet(name);
-    console.log(selectedSet);
     for (item in selectedSet){
         let figure=document.createElement("figure")
 
@@ -47,14 +45,12 @@ function showList(name){
 }
 function selectItem(item){
     if (confirm('Are you sure to select item last worn on '+new Date(selectedSet[item]))){
-    console.log(item);
     changeValue(item)}
 
 
 }
 function changeValue(item){
     selectedSet[item]=Date.now();
-    console.log(selectedSet[item]);
     localStorage.setItem(selectedSetName,JSON.stringify(selectedSet))
     document.getElementById('shirtList').innerHTML=''
     showList(selectedSetName)
