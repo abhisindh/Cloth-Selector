@@ -60,6 +60,7 @@ function loadFromBackup(){
         checkBackupEmpty(i)
         }
         }
+    location=location
     
 }
 function checkBackupEmpty(num){
