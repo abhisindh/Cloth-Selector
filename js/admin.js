@@ -26,8 +26,19 @@ function displaySets(){
             button.id='set'+i
             button.innerHTML='update'
             button.setAttribute('onclick','getValue(this.id)')
-   
             div.appendChild(button)
+
+            var loadButton=document.createElement('button')
+            loadButton.id='load'+i
+            loadButton.innerHTML='load from backup'
+            loadButton.setAttribute('onclick','loadFromBackupOne(this.id)')
+            div.appendChild(loadButton)
+
+            var saveButton=document.createElement('button')
+            saveButton.id='save'+i
+            saveButton.innerHTML='save to backup'
+            saveButton.setAttribute('onclick','saveToBackupOne(this.id)')
+            div.appendChild(saveButton)
         
     }
 }
@@ -54,6 +65,15 @@ function saveToBackup(){
     }
     }
 }
+function saveToBackupOne(id){
+    num=id.replace('save','')
+    console.log(num);
+    if (confirm('Sure to backup current data?')){
+    
+    localStorage.setItem('back'+num,localStorage.getItem('set'+num))
+    
+    }
+}
 function loadFromBackup(){
     if (confirm('Sure to load last backedup data?')){
         for (i in collectionObj){
@@ -63,13 +83,17 @@ function loadFromBackup(){
     location=location
     
 }
+function loadFromBackupOne(id){
+    num=id.replace('load','')
+    console.log(num);
+    if (confirm('Sure to load last backedup data?')){
+        checkBackupEmpty(num)
+        }
+}
 function checkBackupEmpty(num){
     var set='set'+num
     var back='back'+num
     if (localStorage.getItem(back)){
-        var doNothing
-    }else{
         localStorage.setItem(set,localStorage.getItem(back))
-    }
 
-}
+}}
