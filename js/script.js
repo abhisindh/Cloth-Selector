@@ -22,6 +22,7 @@ function back(){
 function showList(name){
     selectedSetName=name
     selectSet(name);
+    console.log(selectedSet)
     for (item in selectedSet){
         let figure=document.createElement("figure")
 
