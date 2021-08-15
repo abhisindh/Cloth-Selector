@@ -10,4 +10,4 @@ arr=text.split("\n")
 for (i=0;i<arr.length;i++){
     obj[arr[i]]=Date.now()
 }
-console.log(obj);
+console.log(JSON.stringify(obj).replace(/'/g, '"'));
